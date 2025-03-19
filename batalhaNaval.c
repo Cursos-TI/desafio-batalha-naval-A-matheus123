@@ -25,6 +25,20 @@ int main() {
         tabuleiro[linhaV + i][colunaV] = '3';
     }
 
+    // posicionando o terceiro navio na diagonal (três posições a partir de tabuleiro[5][4]):
+    int colunaD = 4;
+    int linhaD = 5;
+    for (int i = 0; i < 3; i++) {
+        tabuleiro[linhaD + i][colunaD - i] = '3';
+    }
+
+    // posicionando o quarto navio na diagonal (três posições a partir de tabuleiro[2][7]):
+    int colunaD2 = 7;
+    int linhaD2 = 2;
+    for (int i = 0; i < 3; i++) {
+        tabuleiro[linhaD2 - i][colunaD2 + i] = '3';
+    }
+
     // impressão do tabuleiro:
     printf("   A B C D E F G H I J\n");
     for (int i = 0; i < 10; i++) {
